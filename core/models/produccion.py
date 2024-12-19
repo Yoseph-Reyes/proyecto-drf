@@ -1,0 +1,23 @@
+from django.db import models
+
+class Produccion(models.Model):
+    policy = models.CharField(max_length=50)
+    company = models.CharField(max_length=50)
+    product = models.ForeignKey('core.Product', on_delete=models.CASCADE)
+    currency = models.CharField(max_length=50)
+    monto = models.FloatField()
+    affected_prima = models.FloatField()
+    exmepted_prima = models.FloatField()
+    net_prima = models.FloatField()
+    iva = models.FloatField()
+    gross_prima = models.FloatField()
+    commission = models.FloatField()
+    issue_date = models.DateField()
+    inicio_vigecia = models.DateField()
+    fin_vigecia = models.DateField()
+    client = models.CharField(max_length=50)
+    product_type = models.CharField(max_length=50)
+    status = models.CharField(max_length=50)
+    user = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    father_policy = models.ForeignKey('self', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)

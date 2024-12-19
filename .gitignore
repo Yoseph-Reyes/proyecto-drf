@@ -1,0 +1,30 @@
+# Ignore Python bytecode and cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+env/
+venv/
+ENV/
+.venv/
+.ENV/
+
+# Ignore distribution and packaging directories
+build/
+dist/
+*.egg-info/
+
+# Ignore temporary files
+*.tmp
+*.log
+*.swp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+.sqlite3
