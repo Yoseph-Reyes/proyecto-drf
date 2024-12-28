@@ -1,0 +1,22 @@
+databases:
+  - name: bd
+    plan: free
+    databaseName: bd_1kpx
+    user: bd_1kpx_user
+
+services:
+  - type: web
+    plan: free
+    name: proyecto
+    runtime: python
+    buildCommand: "./build.sh"
+    startCommand: "python -m daphne myproject.asgi:application --port 8000 --bind 0.0.0.0 -v2"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: bd
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
