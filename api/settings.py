@@ -94,7 +94,7 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgresql://bd_1kpx_user:A37hjT4FclhznxHoR6rVTzVcMrEs2Ec5@dpg-cto5qi52ng1s73bh472g-a.oregon-postgres.render.com/bd_1kpx',
         conn_max_age=600
     )
 }

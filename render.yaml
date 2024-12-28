@@ -10,7 +10,7 @@ services:
     name: proyecto
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m daphne myproject.asgi:application --port 8000 --bind 0.0.0.0 -v2"
+    startCommand: "python -m daphne api.asgi:application --port 8000 --bind 0.0.0.0 -v2"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
