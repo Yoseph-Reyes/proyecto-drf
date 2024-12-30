@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-as_e%qfre6of66_ru6*xifm6tlv@%!)3ak%^__wv_7-v_y7myl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://proyecto-dr73.onrender.com']
 
 
 # Application definition
@@ -156,7 +156,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-CSRF_TRUSTED_ORIGINS = ['https://proyecto-dr73.render.com']
+CSRF_TRUSTED_ORIGINS = ['https://proyecto-dr73.onrender.com']
 
 CORS_ALLOW_METHODS = [
 'DELETE',
